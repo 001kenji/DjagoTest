@@ -4,16 +4,10 @@ from django.template import loader
 def Home(request):
     homepage = loader.get_template('index.html')
     
-    if request.method == 'POST':
-        return HttpResponse(homepage.render())
-    else :
-        return HttpResponse('your sending a wrong request')
+    return HttpResponse(homepage.render())
 
 def User(request):
     userpage = loader.get_template('user.html')
 
-    if request.method == 'POST':
-        return HttpResponse(userpage.render())
-    else :
-        return HttpResponse('your sending a wrong request')
+    return HttpResponse(userpage.render())
     

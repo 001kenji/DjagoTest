@@ -5,3 +5,4 @@ urlpatterns = [
     path('', views.Home, name='Home'),
     path('user', views.User, name='User')
 ]
+

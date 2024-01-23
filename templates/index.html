@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Welcome to my home page</h1>
+
+    <form method="post" action="user">
+        {% csrf_token %}
+        <input type="text" style="visibility: hidden;" name="online" value="online">
+        <button type="submit">User</button>
+    </form>
+</body>
+</html>
